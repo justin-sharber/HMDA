@@ -12,6 +12,8 @@ The first part examines predictability.  The associated Python files are:
 * model.py - Trains and tests various models on the data.
 
 ## 2. Discrimination
-The second part examines the possibility of discrimination in home mortgages.  The associated Python files are:
-* data2.py - Loads, cleans, and encodes the data.  Contains a parameter for which features to include.
-* model2.py - Tests model performance on the data.
+The second part examines the possibility of discrimination in home mortgages.  The associated Python file is:
+* discrimination.py - Processes data and models to look for discrimination.  Contains a parameter for whether to include "unfair" (discriminatory) features.
+
+## Note!
+The original dataset is 500,000 data.  Due to size constraints, I have uploaded a subset of the data.  Computations should be close to those shown in the report, but expect differences.
