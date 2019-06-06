@@ -1,7 +1,7 @@
 # HMDA
 Analysis of Home Mortgage Data
 
-This is a data analysis project of home mortgage data.  This repository consists of the data files in CSV format, the Python files for computation, and a report on the findings as a PDF.
+This is a data analysis project of home mortgage data.  This repository consists of the data files in CSV format, the Python files for computation, and [a report on the findings](https://github.com/JShibby/HMDA/blob/master/Executive%20Report%20-%20HMDA%20Data.pdf) as a PDF.
 
 The project has two parts, and the Python files break down into two sets.  
 
