@@ -13,11 +13,11 @@ from numpy.random import choice
 import matplotlib.pyplot as plt
 
 #%%  Data
-#from data import *
+from data import *
 
 nr.seed(0)
-c = choice(df.index, 3000)
-dfa = df.loc[c]
+c = choice(df.index, 5000)
+dfa = df
 dfa.applicant_income.describe()
  
 #%%  Small categoricals  
@@ -43,4 +43,3 @@ for i in range(4):
 num2 = ['population', 'minority_population_pct', 'loan_amount', 
         'applicant_income', 'number_of_owner-occupied_units',]
 sns.pairplot(dfa[num2]) 
-    

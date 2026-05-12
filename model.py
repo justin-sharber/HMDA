@@ -7,7 +7,7 @@ Created on Thu Apr 11 08:23:38 2019
 @author: justin
 """
 #%%  Load
-#from data import *
+from data import *
 
 #%%  Packages
 import matplotlib.pyplot as plt
@@ -30,7 +30,9 @@ logistic_mod.fit(X, y)
 prediction = logistic_mod.predict(val_X)
 
 print('Basic Logistic')
-print(accuracy_score(val_y, prediction).round(rounding))
+acc=accuracy_score(val_y, prediction)
+a2 = round(acc, rnd)
+print('Accuarcy:', a2)
 print()
 
 #%%  Tree
@@ -42,7 +44,9 @@ tree.fit(X, y)
 prediction = tree.predict(val_X).round()
 
 print('Tree')
-print(accuracy_score(val_y, prediction).round(rounding))
+acc=accuracy_score(val_y, prediction)
+a2 = round(acc, rnd)
+print('Accuarcy:', a2)
 print()
 
 #%%  Random Forest
@@ -54,7 +58,11 @@ rf_clf.fit(X, y)
 prediction = rf_clf.predict(val_X)
 
 print('Forest')
-print(accuracy_score(val_y, prediction).round(rounding))
+acc=accuracy_score(val_y, prediction)
+a2 = round(acc, rnd)
+print('Accuarcy:', a2)
+print()
+
 print()
 
 #%%  Neural Network
@@ -67,8 +75,12 @@ nn_mod.fit(X, y)
 prediction = nn_mod.predict(val_X)
 
 print('Neural Network')
-print(accuracy_score(val_y, prediction).round(rounding))
+acc=accuracy_score(val_y, prediction)
+a2 = round(acc, rnd)
+print('Accuarcy:', a2)
 print()
+print()
+
 round(time.time() - t)
 
 #%%
@@ -80,7 +92,11 @@ svm_mod.fit(X, y)
 prediction = svm_mod.predict(val_X)
 
 print('SVM')
-print(accuracy_score(val_y, prediction).round(rounding))
+acc=accuracy_score(val_y, prediction)
+a2 = round(acc, rnd)
+print('Accuarcy:', a2)
+print()
+
 print()
 
 #%%  Adaboost
@@ -92,7 +108,9 @@ ab_clf.fit(X, y)
 prediction = ab_clf.predict(val_X)
 
 print('AdaBoost')
-print(accuracy_score(val_y, prediction).round(rounding))
+acc=accuracy_score(val_y, prediction)
+a2 = round(acc, rnd)
+print('Accuarcy:', a2)
 print()
 
 #%%  End

@@ -3,6 +3,10 @@
 """
 Prepares data to analyze for unfair discrimination.
 
+This script has many redundancies from the initial data script.  
+The issue was that selecting columns out of the X array needed to be done before encoding.
+In the future, code redundancy could be reduced by anticipating the different column selections in the original data script.
+
 Created on Thu Apr 11 08:32:40 2019
 @author: justin
 """
@@ -11,7 +15,7 @@ Created on Thu Apr 11 08:32:40 2019
 include_unfair_features = True
 
 # Determine how many digits to round to in outputs.
-rounding = 3
+rnd = 3
 
 #%%  Head
 import pandas as pd
@@ -28,8 +32,9 @@ from sklearn import preprocessing, linear_model
 from sklearn.metrics import classification_report, accuracy_score
 
 t1 = time.time()
-df = pd.read_csv('data.csv', index_col = 'row_id')
-#df = pd.read_csv('big_data.csv', index_col = 'row_id')
+
+fp = 'data.csv'
+df = pd.read_csv(fp, index_col = 'row_id')
 
 #%%  Columns by subject
 'Property Columns'
@@ -188,5 +193,6 @@ logistic_mod = linear_model.LogisticRegression(solver = 'lbfgs')
 logistic_mod.fit(X, y)
 prediction = logistic_mod.predict(val_X)
 
-acc = accuracy_score(val_y, prediction).round(rounding)
-print(acc)
+acc = accuracy_score(val_y, prediction)
+a2 = round(acc, rnd)
+print('Accuracy:', a2)
