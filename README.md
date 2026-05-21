@@ -12,6 +12,14 @@ The Home Mortgage Disclosure Act of 1975 requires financial institutions to repo
 ## Data Preparation & Feature Engineering
 The analysis utilized a substantial dataset of nearly 440,000 complete records. Data categories included property location, loan information (lender, amount, purpose), applicant information (income, race, sex), and tract-level census data.
 
+Early review of categorical data shows some data is informative about loan acceptance rates.  Somed of these features are "identity" / demographic features, which could represent unfair discrimination.
+
+<img width="710" alt="cat-features-univariate-predictions" src="https://github.com/user-attachments/assets/4c2bb5cf-e7b1-4f62-96ca-f988f6d2ff2c" />
+
+Checking numeric features data for colinearities shows few, although there is a clean correlation between the region population and the number of the property owner's units that are occupied.
+
+<img width="904" alt="cross-scatter-of-selected-numeric-features" src="https://github.com/user-attachments/assets/1f5b0013-bcc6-4c59-8427-53227f851b78" />
+
 ### Unique Feature Engineering: Binning High-Cardinality Categoricals
 A unique challenge in this dataset was the presence of "big categoricals"—features with immense variety like `lender` (6,111 unique categories) and `county_code` (318 unique categories). To use these effectively without overwhelming the models:
 * **Thresholding**: Categories with fewer than 50 records were grouped as "unknown" to ensure reliable statistica l estimates.
@@ -53,6 +61,8 @@ The result of the audit is only a tiny amount of predictive power when discrimin
 |Fair Features Only (Baseline) |	68.6%|
 |Fair + Identity Features |	68.8%|
 |Marginal Difference | 0.2%|
+
+<img width="500" alt="Code_Generated_Image" src="https://github.com/user-attachments/assets/ffbef24e-740f-4836-9b89-c0b193e3d97c" />
 
 ## About the Repository
 This repository hosts the python code for the full data processing, and an executive report on the project findings.  
