@@ -65,4 +65,8 @@ The result of the audit is only a tiny amount of predictive power when discrimin
 <img width="500" alt="Code_Generated_Image" src="https://github.com/user-attachments/assets/ffbef24e-740f-4836-9b89-c0b193e3d97c" />
 
 ## About the Repository
-This repository hosts the python code for the full data processing, and an executive report on the project findings.  
+This repository hosts:
+- Source data (code folder)
+- Python code for data processing (code folder)
+- Guide to Features, explaining features and their encoding
+- Executive Report, describing the project in detail
