@@ -1,6 +1,6 @@
 # Analysis of Home Mortgage Data: Predictive Modeling and Test for Discriminatory Practice
 
-This project analyzes home mortgage loan applications to predict acceptance rates and audit the lending system for potential unfair discrimination. The dataset consists of approximately 440,000 records.
+This project analyzes home mortgage loan applications to predict acceptance rates and audit the lending system for potential unfair discrimination. The original dataset consists of approximately 440,000 records.
 
 The project accomplishes two goals:
 * **Predictive Modeling**: Determining if loan acceptance can be accurately predicted based on publicly available Home Mortgage Disclosure Act (HMDA) data.
@@ -68,7 +68,7 @@ The result of the audit is only a tiny amount of predictive power when discrimin
 
 ## About the Repository
 This repository hosts:
-- Source data (code folder)
+- Data sample (code folder)
 - Python code for data processing (code folder)
 - Guide to Features, explaining features and their encoding
 - Executive Report, describing the project in detail
